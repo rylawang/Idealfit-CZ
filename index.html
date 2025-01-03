@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objevte přirozený doplněk stravy!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a2430, #08324b); /* 深蓝色渐变背景 */
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        /* 左上角Logo和文字样式 */
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .logo-container img {
+            width: 50px; /* Logo大小 */
+            height: auto;
+        }
+
+        .logo-container span {
+            font-size: 18px;
+            color: #38a09d; /* 设置为您提供的颜色 */
+            font-weight: bold;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #38a09d; /* 设置为您提供的颜色 */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            margin-bottom: 40px; /* 调大标题和下一段的间距 */
+        }
+
+        p {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 40px; /* 调大段落和下一段的间距 */
+            line-height: 1.8; /* 增大段落内行间距 */
+        }
+
+        /* 动画效果的按钮 */
+        .button {
+            background-color: #ffb400;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 24px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background 0.3s;
+            animation: swing 2s infinite; /* 摆动动画 */
+        }
+
+        /* 鼠标悬停时效果 */
+        .button:hover {
+            background-color: #ffa000;
+            transform: scale(1.1); /* 鼠标悬停放大 */
+        }
+
+        /* 鼠标点击时的效果 */
+        .button:active {
+            transform: scale(0.95); /* 点击时略微缩小 */
+            background-color: #ff8f00;
+        }
+
+        /* 按钮动画 */
+        @keyframes swing {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(3deg);
+            }
+            75% {
+                transform: rotate(-3deg);
+            }
+        }
+
+        .note {
+            margin-top: 40px; /* 增大小字说明和上一段的间距 */
+            font-size: 14px;
+            color: #bbbbbb; /* 灰色 */
+        }
+
+        /* 背景装饰圆形 */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+
+        .circle.small {
+            width: 50px;
+            height: 50px;
+            top: 20%;
+            left: 30%;
+        }
+
+        .circle.medium {
+            width: 100px;
+            height: 100px;
+            top: 40%;
+            right: 20%;
+        }
+
+        .circle.large {
+            width: 150px;
+            height: 150px;
+            bottom: 10%;
+            left: 15%;
+        }
+
+        /* 图片装饰 */
+        .image {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .image.left {
+            bottom: 10%;
+            left: 5%;
+            width: 120px;
+        }
+
+        .image.right {
+            top: 10%;
+            right: 5%;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 左上角的Logo和产品文字 -->
+    <div class="logo-container">
+        <img src="images/logo.png" alt="Idealfit Logo">
+        <span>Idealfit</span>
+    </div>
+
+    <h1>Objevte přirozený doplněk stravy</h1>
+    <p>Zjistěte, jak může podporovat váš každodenní život.</p>
+    <button class="button">Získejte vzorek zdarma</button>
+    <p class="note">Vyzkoušení zdarma neobsahuje žádné skryté poplatky. Platíte pouze za dopravu.</p>
+
+    <!-- 背景装饰圆形 -->
+    <div class="circle small"></div>
+    <div class="circle medium"></div>
+    <div class="circle large"></div>
+
+    <!-- 装饰图片 -->
+    <img src="images/avocado-left.png" alt="Avocado" class="image left">
+    <img src="images/avocado-right.png" alt="Avocado" class="image right">
+</body>
+</html>
+
+
